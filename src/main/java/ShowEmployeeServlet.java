@@ -27,15 +27,13 @@ public class ShowEmployeeServlet extends HttpServlet {
         pw.println("<link rel='stylesheet' href='css/bootstrap.css'></link>");
         pw.println("<style>");
         pw.println(".custom-container { display: flex; justify-content: center; align-items: center; height: 100vh; }");
-        pw.println(".custom-card { max-width: 800px; }"); // Adjust the max-width as needed
-        pw.println("</style>");
+        pw.println(".custom-card { max-width: 800px; }");
         pw.println("</head>");
         pw.println("<body>");
 
         pw.println("<div class='container custom-container'>"); 
-        pw.println("<div class='card custom-card mx-auto'>"); // Start of custom card div
-        pw.println("<div class='card-body'>"); // Start of card body
-
+        pw.println("<div class='card custom-card mx-auto'>"); 
+        pw.println("<div class='card-body'>"); 
         pw.println("<h5 class='card-title'>Employee Information</h5>");
 
         try {
@@ -85,9 +83,9 @@ public class ShowEmployeeServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-        pw.println("</div>"); // End of card body
-        pw.println("</div>"); // End of custom card div
-        pw.println("</div>"); // End of custom container
+        pw.println("</div>");
+        pw.println("</div>"); 
+        pw.println("</div>"); 
 
         pw.println("<a href='AddEmployee.html'><button class='btn btn-light text-dark'>Add Employee</button></a>");
         pw.println("</body>");
@@ -100,7 +98,6 @@ public class ShowEmployeeServlet extends HttpServlet {
         doGet(req, resp);
     }
 
-    // Utility method to escape HTML characters
     private String escapeHtml(String input) {
         return input == null ? "" : input.replaceAll("<", "&lt;").replaceAll(">", "&gt;");
     }
