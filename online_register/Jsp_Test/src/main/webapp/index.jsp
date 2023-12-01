@@ -45,7 +45,6 @@
     <p>This is the home page. Feel free to explore.</p>
 
     <%
-        // Example of using JSP expression to display dynamic content
         String currentDate = new java.util.Date().toString();
     %>
 
